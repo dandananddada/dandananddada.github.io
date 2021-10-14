@@ -112,7 +112,7 @@ exports.ssrComponents = {
   "component---cache-dev-404-page-js": hot(preferDefault(__webpack_require__(/*! ./.cache/dev-404-page.js */ "./.cache/dev-404-page.js"))),
   "component---src-pages-404-js": hot(preferDefault(__webpack_require__(/*! ./src/pages/404.js */ "./src/pages/404.js"))),
   "component---src-pages-index-js": hot(preferDefault(__webpack_require__(/*! ./src/pages/index.js */ "./src/pages/index.js"))),
-  "component---src-templates-blog-page-js": hot(preferDefault(__webpack_require__(/*! ./src/templates/blog/page.js */ "./src/templates/blog/page.js")))
+  "component---src-templates-game-games-template-js": hot(preferDefault(__webpack_require__(/*! ./src/templates/game/games.template.js */ "./src/templates/game/games.template.js")))
   }
 
 
@@ -34897,6 +34897,69 @@ SEO.propTypes = {
 
 /***/ }),
 
+/***/ "./src/fonts/DINEngschrift-Alternate.otf":
+/*!***********************************************!*\
+  !*** ./src/fonts/DINEngschrift-Alternate.otf ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/DINEngschrift-Alternate-bb5187563d27905199c81b1bb87f7c45.otf";
+
+/***/ }),
+
+/***/ "./src/fonts/MFZiZai_Noncommercial-Regular.ttf":
+/*!*****************************************************!*\
+  !*** ./src/fonts/MFZiZai_Noncommercial-Regular.ttf ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/MFZiZai_Noncommercial-Regular-09b436e326d6108440691ce096b5f2a3.ttf";
+
+/***/ }),
+
+/***/ "./src/helper/image.js":
+/*!*****************************!*\
+  !*** ./src/helper/image.js ***!
+  \*****************************/
+/*! exports provided: aliyun */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "aliyun", function() { return aliyun; });
+const aliyun = (year, name) => {
+  const encodeName = encodeURIComponent(name);
+  return `https://eten-wang.oss-cn-beijing.aliyuncs.com/games/${year}/${encodeName}.jpg?x-oss-process=style/game.eten.wang`;
+};
+
+/***/ }),
+
+/***/ "./src/helper/wh.js":
+/*!**************************!*\
+  !*** ./src/helper/wh.js ***!
+  \**************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function (width, height) {
+  const _width = width / 375 * 100;
+
+  if (height) {
+    return `
+      width: ${_width}vw;
+      height: ${_width * height / width}vw;
+    `;
+  } else {
+    return `${_width}vw`;
+  }
+});
+
+/***/ }),
+
 /***/ "./src/pages/404.js":
 /*!**************************!*\
   !*** ./src/pages/404.js ***!
@@ -34954,131 +35017,127 @@ const IndexPage = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.
 
 /***/ }),
 
-/***/ "./src/templates/blog/blog.scss":
-/*!**************************************!*\
-  !*** ./src/templates/blog/blog.scss ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./src/templates/game/games.styled.js":
+/*!********************************************!*\
+  !*** ./src/templates/game/games.styled.js ***!
+  \********************************************/
+/*! exports provided: GlobalStyle, Games, Title, Game, Image, BottomContainer, Score, Content, Platform, Name, Platinum */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GlobalStyle", function() { return GlobalStyle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Games", function() { return Games; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Title", function() { return Title; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Game", function() { return Game; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Image", function() { return Image; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BottomContainer", function() { return BottomContainer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Score", function() { return Score; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Content", function() { return Content; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Platform", function() { return Platform; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Name", function() { return Name; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Platinum", function() { return Platinum; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/_styled-components@4.2.0@styled-components/dist/styled-components.esm.js");
+/* harmony import */ var _helper_wh__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../helper/wh */ "./src/helper/wh.js");
+/* harmony import */ var _fonts_DINEngschrift_Alternate_otf__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../fonts/DINEngschrift-Alternate.otf */ "./src/fonts/DINEngschrift-Alternate.otf");
+/* harmony import */ var _fonts_DINEngschrift_Alternate_otf__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_fonts_DINEngschrift_Alternate_otf__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _fonts_MFZiZai_Noncommercial_Regular_ttf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../fonts/MFZiZai_Noncommercial-Regular.ttf */ "./src/fonts/MFZiZai_Noncommercial-Regular.ttf");
+/* harmony import */ var _fonts_MFZiZai_Noncommercial_Regular_ttf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_fonts_MFZiZai_Noncommercial_Regular_ttf__WEBPACK_IMPORTED_MODULE_3__);
 
 
+
+
+const GlobalStyle = styled_components__WEBPACK_IMPORTED_MODULE_0__["createGlobalStyle"]`
+  @font-face {
+    font-family: 'DINEngschrift-Alternate';
+    font-style: normal;
+    font-weight: normal;
+    src: local('DINEngschrift-Alternate'), url(${_fonts_DINEngschrift_Alternate_otf__WEBPACK_IMPORTED_MODULE_2___default.a}) format('truetype');
+  }
+  @font-face {
+    font-family: 'MFZiZai_Noncommercial-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url(${_fonts_MFZiZai_Noncommercial_Regular_ttf__WEBPACK_IMPORTED_MODULE_3___default.a}) format('truetype');
+  }
+  body {
+    background-color: #F3F3F3;
+  }
+`;
+const Games = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "gamesstyled__Games"
+})(["\n  display: flex;\n  justify-content: center;\n  flex-wrap: wrap;\n  margin-top: ", ";\n"], Object(_helper_wh__WEBPACK_IMPORTED_MODULE_1__["default"])(24));
+const Title = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "gamesstyled__Title"
+})(["\n  width: 100%;\n  margin-bottom: ", "\n  text-align: center;\n  color: #29A987;\n  font-size: ", "\n  font-family: DINEngschrift-Alternate;\n"], Object(_helper_wh__WEBPACK_IMPORTED_MODULE_1__["default"])(14), Object(_helper_wh__WEBPACK_IMPORTED_MODULE_1__["default"])(30));
+const Game = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "gamesstyled__Game"
+})(["\n  width: ", ";\n  margin-bottom: ", ";\n  border-radius: ", ";\n  box-shadow: 0 ", " ", " 0 rgba(0, 0, 0, 0.09);\n"], Object(_helper_wh__WEBPACK_IMPORTED_MODULE_1__["default"])(280), Object(_helper_wh__WEBPACK_IMPORTED_MODULE_1__["default"])(20), Object(_helper_wh__WEBPACK_IMPORTED_MODULE_1__["default"])(8), Object(_helper_wh__WEBPACK_IMPORTED_MODULE_1__["default"])(4), Object(_helper_wh__WEBPACK_IMPORTED_MODULE_1__["default"])(12));
+const Image = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "gamesstyled__Image"
+})(["\n  display: flex;\n  width: ", ";\n  margin-bottom: 0;\n  background-color: #FFF;\n  border-width: 0;\n  border-top-left-radius: ", ";\n  border-top-right-radius: ", ";\n  background-size: cover;\n  background-position: 50% 50%;\n  background-repeat: no-repeat;\n  background-image: url(", ");\n  \n"], Object(_helper_wh__WEBPACK_IMPORTED_MODULE_1__["default"])(280, 150), Object(_helper_wh__WEBPACK_IMPORTED_MODULE_1__["default"])(8), Object(_helper_wh__WEBPACK_IMPORTED_MODULE_1__["default"])(8), props => props.image);
+const BottomContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "gamesstyled__BottomContainer"
+})(["\n  display: flex;\n  padding: ", " ", " ", " ", ";\n  background-color: #FFF;\n  border-bottom-left-radius: ", ";\n  border-bottom-right-radius: ", ";\n"], Object(_helper_wh__WEBPACK_IMPORTED_MODULE_1__["default"])(10), Object(_helper_wh__WEBPACK_IMPORTED_MODULE_1__["default"])(6), Object(_helper_wh__WEBPACK_IMPORTED_MODULE_1__["default"])(12), Object(_helper_wh__WEBPACK_IMPORTED_MODULE_1__["default"])(10), Object(_helper_wh__WEBPACK_IMPORTED_MODULE_1__["default"])(8), Object(_helper_wh__WEBPACK_IMPORTED_MODULE_1__["default"])(8));
+const Score = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "gamesstyled__Score"
+})(["\n  ", ";\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin-right: ", ";\n  color: #FFF;\n  background-color: #29A987;\n  border-radius: ", ";\n  font-size: ", ";\n  font-family: DINEngschrift-Alternate;\n"], Object(_helper_wh__WEBPACK_IMPORTED_MODULE_1__["default"])(36, 36), Object(_helper_wh__WEBPACK_IMPORTED_MODULE_1__["default"])(8), Object(_helper_wh__WEBPACK_IMPORTED_MODULE_1__["default"])(5), Object(_helper_wh__WEBPACK_IMPORTED_MODULE_1__["default"])(28));
+const Content = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "gamesstyled__Content"
+})(["\n"]);
+const Platform = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
+  displayName: "gamesstyled__Platform"
+})(["\n  height: ", ";\n  margin-top: 0;\n  margin-bottom: 0;\n  color: #9A9A9D;\n  font-size: ", ";\n  font-weight: 100;\n  font-family: DINEngschrift-Alternate;\n"], Object(_helper_wh__WEBPACK_IMPORTED_MODULE_1__["default"])(12), Object(_helper_wh__WEBPACK_IMPORTED_MODULE_1__["default"])(12));
+const Name = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
+  displayName: "gamesstyled__Name"
+})(["\n  margin: ", " 0 ", ";\n  color: #010101;\n  font-size: ", ";\n  font-family: MFDianHei_Noncommercial-Regular;\n  font-weight: 400;\n"], Object(_helper_wh__WEBPACK_IMPORTED_MODULE_1__["default"])(2), Object(_helper_wh__WEBPACK_IMPORTED_MODULE_1__["default"])(3), Object(_helper_wh__WEBPACK_IMPORTED_MODULE_1__["default"])(16));
+const Platinum = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
+  displayName: "gamesstyled__Platinum"
+})(["\n  margin: ", " 0 ", ";\n  color: #010101;\n  background-image: url(https://eten-wang.oss-cn-beijing.aliyuncs.com/games/icon/platinum.jpeg)\n  font-size: ", ";\n"], Object(_helper_wh__WEBPACK_IMPORTED_MODULE_1__["default"])(2), Object(_helper_wh__WEBPACK_IMPORTED_MODULE_1__["default"])(3), Object(_helper_wh__WEBPACK_IMPORTED_MODULE_1__["default"])(16));
 
 /***/ }),
 
-/***/ "./src/templates/blog/components/header.js":
-/*!*************************************************!*\
-  !*** ./src/templates/blog/components/header.js ***!
-  \*************************************************/
+/***/ "./src/templates/game/games.template.js":
+/*!**********************************************!*\
+  !*** ./src/templates/game/games.template.js ***!
+  \**********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return BlogHeader; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-function BlogHeader() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
-    className: "site-header"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "site-title",
-    href: "/"
-  }, "Eten Wang"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-    className: "site-nav"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "trigger"
-  }))));
-}
-
-/***/ }),
-
-/***/ "./src/templates/blog/page.js":
-/*!************************************!*\
-  !*** ./src/templates/blog/page.js ***!
-  \************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return BlogContentsTamplate; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/header */ "./src/templates/blog/components/header.js");
-/* harmony import */ var _blog_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./blog.scss */ "./src/templates/blog/blog.scss");
-/* harmony import */ var _blog_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_blog_scss__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _games_styled_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./games.styled.js */ "./src/templates/game/games.styled.js");
+/* harmony import */ var _helper_image__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../helper/image */ "./src/helper/image.js");
 
 
 
-function BlogContentsTamplate({
-  pageContext,
-  data // this prop will be injected by the GraphQL query below.
 
-}) {
-  const PATH = '/posts';
+const GamesTemplate = ({
+  pageContext
+}) => {
   const {
-    prevPage,
-    nextPage
+    games,
+    year
   } = pageContext;
-  const posts = data.allMarkdownRemark.edges;
-
-  const link = (page, text) => {
-    if (page) {
-      const link = page === 1 ? PATH : `${PATH}${page}`; // rewrite page 1 to posts.
-
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        className: "pagination-item",
-        href: link
-      }, text);
-    }
-
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-      className: "pagination-item disabled"
-    }, text);
-  };
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_header__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "page-content"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "home"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    className: "post-list"
-  }, posts.map(({
-    node
-  }) => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_games_styled_js__WEBPACK_IMPORTED_MODULE_1__["GlobalStyle"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_games_styled_js__WEBPACK_IMPORTED_MODULE_1__["Games"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_games_styled_js__WEBPACK_IMPORTED_MODULE_1__["Title"], null, year, " Games"), games && games.map(game => {
     const {
-      path,
-      category,
-      date,
-      title,
-      summary
-    } = node.frontmatter;
-    const link = `${PATH}/${category}/${path}/`;
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-      className: "post",
-      key: title
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-      className: "post-meta"
-    }, date), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-      className: "post-link",
-      href: link
-    }, title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-      className: "post-summary"
-    }, summary));
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "pagination clearfix mb1 mt4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "left"
-  }, link(`/${prevPage}`, 'Previous')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "right"
-  }, link(`/${nextPage}`, 'Next')))))));
-}
-const pageQuery = "3633481176";
+      name,
+      score,
+      platform,
+      platinum
+    } = game;
+    const image = Object(_helper_image__WEBPACK_IMPORTED_MODULE_2__["aliyun"])(year, name);
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_games_styled_js__WEBPACK_IMPORTED_MODULE_1__["Game"], {
+      key: name
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_games_styled_js__WEBPACK_IMPORTED_MODULE_1__["Image"], {
+      image: image
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_games_styled_js__WEBPACK_IMPORTED_MODULE_1__["BottomContainer"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_games_styled_js__WEBPACK_IMPORTED_MODULE_1__["Score"], null, " ", score, " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_games_styled_js__WEBPACK_IMPORTED_MODULE_1__["Content"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_games_styled_js__WEBPACK_IMPORTED_MODULE_1__["Platform"], null, platform), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_games_styled_js__WEBPACK_IMPORTED_MODULE_1__["Name"], null, name), platinum && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_games_styled_js__WEBPACK_IMPORTED_MODULE_1__["Platinum"], null))));
+  })));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (GamesTemplate);
 
 /***/ }),
 
