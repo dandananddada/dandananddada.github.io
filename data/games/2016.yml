@@ -6,11 +6,11 @@ data:
     platform: 'Wii U'
     day: '01-28'
   - name: '超级马里奥赛车8'
-    score: 9
+    score: 9.0
     platform: 'Wii U'
     day: '01-30'
   - name: '说剑'
-    score: 9
+    score: 9.0
     platform: 'App Store'
     day: '02-19'
   - name: '火影忍者：究极忍者风暴4'
@@ -22,7 +22,7 @@ data:
     platform: 'PS4'
     day: '04-22'
   - name: '战斗吧剑灵'
-    score: 8
+    score: 8.0
     platform: 'App Store' 
     day: '05-08'
   - name: '人类资源机器'

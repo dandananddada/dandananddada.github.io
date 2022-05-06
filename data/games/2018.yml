@@ -5,7 +5,7 @@ data:
     score: 10
     platform: 'steam'
   - name: '旅かえる'
-    score: 8
+    score: 8.0
     platform: 'App Store'
   - name: '尼尔：机械纪元'
     score: 9.8
@@ -32,10 +32,10 @@ data:
     score: 8.6
     platform: 'switch'
   - name: '月圆之夜'
-    score: 9
+    score: 9.0
     platform: 'App Store'
   - name: '刺客信条：奥德赛'
-    score: 9
+    score: 9.0
     platform: 'Uplay'
   - name: '荒野大镖客：救赎2'
     score: 9.9
@@ -44,7 +44,7 @@ data:
     score: 9.5
     platform: 'App Store'
   - name: 'GRIS'
-    score: 9
+    score: 9.0
     platform: 'steam'
   - name: '任天堂全明星大乱斗：特别版'
     score: 9.7

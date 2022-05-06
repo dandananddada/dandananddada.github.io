@@ -31,7 +31,7 @@ data:
     platform: 'steam'
     day: '06-15'
   - name: '节奏海拉鲁'
-    score: 9
+    score: 9.0
     platform: 'switch'
     day: '06-20'
   - name: '鬼泣5'

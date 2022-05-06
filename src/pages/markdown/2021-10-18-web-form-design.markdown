@@ -1,3 +1,11 @@
+---
+layout: post
+category: frontend
+date:   2021-10-18
+path: design 
+title: 表单设计
+summary: '.'
+---
 ## 表单的组织和完成路径
 
 最然很多视觉和交互设计考虑因素对完成表单填写都发挥着重要作用，但真正起作用的常常是 **表单的内容及组织方式** 。

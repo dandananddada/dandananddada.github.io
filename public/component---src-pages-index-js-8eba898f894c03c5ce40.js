@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{RXBc:function(e,t,a){"use strict";a.r(t);var n=a("xwgP"),c=a.n(n),o=a("Wbzz"),r=a("Bl7J"),i=a("vrFN");t.default=function(){return c.a.createElement(r.a,null,c.a.createElement(i.a,{title:"Home",keywords:["gatsby","application","react"]}),c.a.createElement(o.Link,{to:"/posts"},"博客"),c.a.createElement(o.Link,{to:"/games/2021"},"游戏"))}}}]);
+//# sourceMappingURL=component---src-pages-index-js-8eba898f894c03c5ce40.js.map

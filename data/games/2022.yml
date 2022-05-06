@@ -1,0 +1,23 @@
+data:
+  year: 2022
+  games:
+  - name: '对战公主'
+    score: 6.0
+    platform: 'switch'
+  - name: '鲁弗兰的地下迷宫与魔女旅团'
+    score: 9.5
+    platform: 'switch'
+  - name: '宝可梦传说：阿尔宙斯'
+    score: 9.2
+    platform: 'switch'
+  - name: '师父'
+    score: 9.4
+    platform: 'epic'
+    day: '2-14'
+    pay: '74'
+  - name: '地平线：西之绝境'
+    score: 9.6
+    platform: 'xgp'
+  - name: '诡野西部'
+    score: 8.6
+    platform: 'ps4'
