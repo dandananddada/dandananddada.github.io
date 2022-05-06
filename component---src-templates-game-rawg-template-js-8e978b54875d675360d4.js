@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[10],{mixo:function(n,t,a){"use strict";a.r(t);var e=a("xwgP"),r=a.n(e);t.default=function(n){var t=n.pageContext.data;return r.a.createElement(r.a.Fragment,null,JSON.stringify(t))}}}]);
+//# sourceMappingURL=component---src-templates-game-rawg-template-js-8e978b54875d675360d4.js.map
