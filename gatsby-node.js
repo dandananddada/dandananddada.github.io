@@ -5,7 +5,7 @@
  */
 
 const path = require("path")
-const Rawger = require('rawger');
+// const Rawger = require('rawger');
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
 
@@ -95,13 +95,13 @@ exports.createPages = async ({ actions, graphql }) => {
     })
   })
 
-  const rawger = await Rawger();
-  const { users } = rawger;
- const collections = (await users('orels1').collections()).get();
-  const RAWGTemplate = path.resolve(`src/templates/game/rawg.template.js`)
-  createPage({
-    path: '/g',
-    component: RAWGTemplate,
-    context: { data: { collections } }
-  })
+//   const rawger = await Rawger();
+//   const { users } = rawger;
+//  const collections = (await users('orels1').collections()).get();
+//   const RAWGTemplate = path.resolve(`src/templates/game/rawg.template.js`)
+//   createPage({
+//     path: '/g',
+//     component: RAWGTemplate,
+//     context: { data: { collections } }
+//   })
 }
