@@ -44,10 +44,13 @@ data:
     score: 8.9
   - name: '异度神剑3'
     platform: 'switch'
-    score: 9.5
+    score: 9.4
   - name: 'splatoon 3'
     platform: 'switch'
     score: 9.6
   - name: 'immortality'
     platform: 'xgp'
     score: 9
+  - name: '异度神剑2'
+    platform: 'switch'
+    score: 9.2
