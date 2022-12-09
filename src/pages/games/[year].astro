@@ -1,0 +1,130 @@
+---
+export async function getStaticPaths() {
+  return [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023].map(year => ({
+     params: { year }
+  }))
+}
+
+const data: any = await import(`./data/${Astro.params.year}.yml`)
+const { title } = Astro.props;
+const { year, games } = data;
+
+const imageUrl = (game: any) => {
+	const encodeName = encodeURIComponent(game.name)
+    return `https://eten-wang.oss-cn-beijing.aliyuncs.com/games/${year}/${encodeName}.jpg?x-oss-process=style/game.eten.wang`
+}
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<div class="games">
+      <div class="title">{year} Games</div>
+      { games && games.map((game: any) => (
+        <div class="game">
+        <div class="image" style={
+          { backgroundImage: `url(${imageUrl(game)})` }
+        }></div>
+        <div class="bottom-container">
+          <div class="score">
+          {game.score}
+          </div>
+          <div class="content">
+          <div class="platform">{game.platform}</div>
+          <p class="name">{game.name}</p>
+          </div>
+        </div>
+        </div>
+      )) }
+    </div>
+	</body>
+</html>
+
+<style lang="sass">
+@import './styles/reset'
+@import './styles/helper'
+
+@font-face
+  font-family: DINEngschrift-Alternate
+  src: url('/fonts/DINEngschrift-Alternate.otf')
+@font-face
+  font-family: MFZiZai_Noncommercial-Regular
+  src: url('/fonts/MFZiZai_Noncommercial-Regular.ttf')
+
+body
+  background-color: #F3F3F3
+
+.title
+  width: 100%
+  margin-bottom: vw(14)
+  text-align: center
+  color: #29A987
+  font-size: vw(30)
+  font-family: DINEngschrift-Alternate
+
+.games
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+  margin-top: vw(24)
+
+.game
+  width: vw(280)
+  margin-bottom: vw(20)
+  border-radius: vw(8)
+  box-shadow: 0 vw(4) vw(12) 0 rgba(0, 0, 0, 0.09)
+
+.image
+  +size(280, 150)
+  background-color: #FFF
+  border-width: 0
+  border-top-left-radius: vw(8)
+  border-top-right-radius: vw(8)
+  background-size: cover
+  background-position: 50% 50%
+  background-repeat: no-repeat
+
+.bottom-container
+  display: flex
+  height: vw(36)
+  padding: vw(10) vw(6) vw(12) vw(10)
+  background-color: #FFF
+  border-bottom-left-radius: vw(8)
+  border-bottom-right-radius: vw(8)
+
+.score
+  +size(36, 36)
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-right: vw(8)
+  color: #FFF
+  background-color: #29A987
+  border-radius: vw(5)
+  font-size: vw(28)
+  font-family: DINEngschrift-Alternate
+
+.platform
+  height: vw(12)
+  margin-top: 0
+  margin-bottom: 0
+  color: #9A9A9D
+  font-size: vw(12)
+  font-weight: 100
+  font-family: DINEngschrift-Alternate
+
+.name
+  margin: vw(6) 0
+  color: #010101
+  font-size: vw(16)
+  font-family: MFDianHei_Noncommercial-Regular
+  font-weight: 400
+
+</style>

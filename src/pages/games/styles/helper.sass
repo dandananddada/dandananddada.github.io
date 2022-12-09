@@ -1,0 +1,10 @@
+@use "sass:math"
+
+@mixin size ($w, $h)
+  $width: math.div($w, 375) * 100
+  $height: math.div(($width * $h), $w)
+  width: $width + vw
+  height: $height + vw
+
+@function vw ($w)
+  @return math.div($w, 375) * 100 + vw
