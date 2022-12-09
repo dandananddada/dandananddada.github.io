@@ -1,0 +1,110 @@
+---
+export async function getStaticPaths() {
+  const allPosts = await Astro.glob('./*.markdown');
+  console.log(allPosts);
+  return allPosts.map((post: any) => ({
+    params: { slug: post.url.split("/").pop() },
+    props: {
+      ...post,
+      // Any additional props
+    },
+  }));
+}
+const { title } = Astro.props;
+
+const allPosts = await Astro.glob('./*.markdown');
+
+// const link = (page: number, text: string) => {
+//     if (page) {
+//       const link = (page === 1 ? PATH : `${PATH}${page}`) // rewrite page 1 to posts.
+//       return (<a class="pagination-item" href={link}>{text}</a>)
+//     }
+//     return (<span class="pagination-item disabled">{text}</span>)
+//   }
+
+---
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+    <header class="site-header">
+      <div class="wrapper">
+        <a class="site-title" href="/">eten wang</a>
+        <nav class="site-nav">
+          {/* <a href="#" class="menu-icon"></a> */}
+          <div class="trigger">
+          </div>
+        </nav>
+      </div>
+    </header>
+<div class="page-content">
+  <div class="wrapper">
+    <div class="home">
+      <ul class="post-list">
+        {allPosts.map((node: any) => {
+          const { date, title, summary } = node.frontmatter
+          return (
+            <li class="post">
+              <span class="post-meta">{ date.slice(0, 10) }</span>
+              <h2>
+                <a class="post-link" href={node.url}>{ title }</a>
+              </h2>
+              <p class="post-summary">{ summary }</p>
+            </li>
+          )
+        })}
+      </ul>
+      <div class="pagination clearfix mb1 mt4">
+        <div class="left">
+          <!-- { link(`/${prevPage}`, 'Previous') } -->
+        </div>
+        <div class="right">
+          <!-- { link(`/${nextPage}`, 'Next') } -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+<style lang="scss">
+  @charset "utf-8";
+
+  $base-font-family: Helvetica, Arial, sans-serif;
+  $base-font-size:   16px;
+  $small-font-size:  $base-font-size * 0.875;
+  $base-line-height: 1.5;
+
+  $spacing-unit:     30px;
+
+  $text-color:       #111;
+  $background-color: #fdfdfd;
+  $brand-color:      #010101;
+
+  $grey-color:       #828282;
+  $grey-color-light: lighten($grey-color, 40%);
+  $grey-color-dark:  darken($grey-color, 25%);
+
+  // Width of the content area
+  $content-width:    800px;
+
+  $on-palm:          600px;
+  $on-laptop:        800px;
+
+  @mixin media-query($device) {
+      @media screen and (max-width: $device) {
+          @content;
+      }
+  }
+
+  @import './blog/styles/themes/atelier.dune.light.css';
+  @import "./blog/styles/base", "./blog/styles/layout";
+
+</style>

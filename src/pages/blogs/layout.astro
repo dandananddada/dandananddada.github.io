@@ -1,0 +1,72 @@
+---
+const { frontmatter, title } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+<header class="site-header">
+    <div class="wrapper">
+      <a class="site-title" href="/blogs">eten wang</a>
+      <nav class="site-nav">
+        {/* <a href="#" class="menu-icon"></a> */}
+        <div class="trigger">
+        </div>
+      </nav>
+    </div>
+  </header>
+<div class="page-content">
+    <div class="wrapper">
+        <div class="post">
+        <header class="post-header">
+        <h1 class="post-title">{frontmatter.title}</h1>
+        <p class="post-meta">{frontmatter.date.slice(0, 10)}</p>
+        </header>
+        <article class="post-content">
+            <slot></slot>
+        </article>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<style lang="scss">
+    @charset "utf-8";
+
+    $base-font-family: Helvetica, Arial, sans-serif;
+    $base-font-size:   16px;
+    $small-font-size:  $base-font-size * 0.875;
+    $base-line-height: 1.5;
+
+    $spacing-unit:     30px;
+
+    $text-color:       #111;
+    $background-color: #fdfdfd;
+    $brand-color:      #010101;
+
+    $grey-color:       #828282;
+    $grey-color-light: lighten($grey-color, 40%);
+    $grey-color-dark:  darken($grey-color, 25%);
+
+    // Width of the content area
+    $content-width:    800px;
+
+    $on-palm:          600px;
+    $on-laptop:        800px;
+
+    @mixin media-query($device) {
+        @media screen and (max-width: $device) {
+            @content;
+        }
+    }
+
+    @import './blog/styles/themes/atelier.dune.light.css';
+    @import "./blog/styles/base", "./blog/styles/layout";
+
+</style>
