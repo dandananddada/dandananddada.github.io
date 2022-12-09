@@ -3,7 +3,7 @@ layout: ./layout.astro
 category: frontend
 date:   2021-03-05
 path: design 
-title: 设计
+title: 'font design'
 summary: '.'
 ---
 ## 字体类型

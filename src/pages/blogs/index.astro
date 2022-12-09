@@ -1,27 +1,6 @@
 ---
-export async function getStaticPaths() {
-  const allPosts = await Astro.glob('./*.markdown');
-  console.log(allPosts);
-  return allPosts.map((post: any) => ({
-    params: { slug: post.url.split("/").pop() },
-    props: {
-      ...post,
-      // Any additional props
-    },
-  }));
-}
-const { title } = Astro.props;
-
-const allPosts = await Astro.glob('./*.markdown');
-
-// const link = (page: number, text: string) => {
-//     if (page) {
-//       const link = (page === 1 ? PATH : `${PATH}${page}`) // rewrite page 1 to posts.
-//       return (<a class="pagination-item" href={link}>{text}</a>)
-//     }
-//     return (<span class="pagination-item disabled">{text}</span>)
-//   }
-
+// const allPosts = await Astro.glob('./*.markdown');
+const allPosts = []
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -30,7 +9,6 @@ const allPosts = await Astro.glob('./*.markdown');
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
 	</head>
 	<body>
     <header class="site-header">

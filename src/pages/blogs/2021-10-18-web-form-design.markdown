@@ -1,9 +1,9 @@
 ---
 layout: ./layout.astro
 category: frontend
-date:   2021-10-18
+date: 2021-10-18
 path: design 
-title: 表单设计
+title: 'form design'
 summary: '.'
 ---
 ## 表单的组织和完成路径
