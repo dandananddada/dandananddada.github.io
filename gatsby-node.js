@@ -5,7 +5,6 @@
  */
 
 const path = require("path")
-// const Rawger = require('rawger');
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
 

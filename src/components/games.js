@@ -3,7 +3,6 @@ import * as Styled from './game.style.js';
 
 const Games = ({ pageContext }) => {
   const { games } = pageContext 
-  debugger
   return (
     <Styled.Games>
       { games && games.map(game => (

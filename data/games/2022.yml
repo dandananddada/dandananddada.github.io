@@ -54,3 +54,21 @@ data:
   - name: '异度神剑2'
     platform: 'switch'
     score: 9.2
+  - name: '瘟疫传说：安魂曲'
+    platform: 'xgp'
+    score: 9
+  - name: '黄金魁犬'
+    platform: 'steam'
+    score: 8.9
+  - name: Asuras Wrath
+    platform: 'xss'
+    score: 9.6
+  - name: '猎天使魔女3'
+    platform: 'switch'
+    score: 9.5
+  - name: 'Persona 4 Arena Ultimax'
+    platform: 'switch'
+    score: 8.8
+  - name: '战神：诸神黄昏'
+    platform: 'ps5'
+    score: 9.6
