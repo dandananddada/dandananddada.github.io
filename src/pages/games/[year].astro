@@ -10,7 +10,7 @@ const { title } = Astro.props;
 const { year, games } = data;
 
 const imageUrl = (game: any) => {
-	const encodeName = encodeURIComponent(game.name)
+	const encodeName = encodeURIComponent(game.name).replace(/[!'()*]/g, escape)
     return `https://eten-wang.oss-cn-beijing.aliyuncs.com/games/${year}/${encodeName}.jpg?x-oss-process=style/game.eten.wang`
 }
 ---
