@@ -1,5 +1,5 @@
 ---
-layout: ./layout.astro
+layout: ../../layouts/BlogLayout.astro
 category: frontend
 date:   2019-06-20
 path: proxy-and-reflect

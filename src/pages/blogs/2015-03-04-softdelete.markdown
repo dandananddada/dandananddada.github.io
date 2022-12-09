@@ -1,5 +1,5 @@
 ---
-layout: ./layout.astro
+layout: ../../layouts/BlogLayout.astro
 category: rails-gems
 date:   2015-03-04
 path:  soft-delete-with-rails

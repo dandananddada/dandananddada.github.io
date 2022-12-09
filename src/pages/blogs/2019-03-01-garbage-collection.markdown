@@ -1,5 +1,5 @@
 ---
-layout: ./layout.astro
+layout: ../../layouts/BlogLayout.astro
 category: frontend
 date:   2019-03-01
 path:  garbage-collection

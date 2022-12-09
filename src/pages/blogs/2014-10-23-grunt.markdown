@@ -1,5 +1,5 @@
 ---
-layout: ./layout.astro
+layout: ../../layouts/BlogLayout.astro
 path: grunt
 category: frontend
 date:   2014-10-23

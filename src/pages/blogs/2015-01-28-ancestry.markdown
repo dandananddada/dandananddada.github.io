@@ -1,5 +1,5 @@
 ---
-layout: ./layout.astro
+layout: ../../layouts/BlogLayout.astro
 date:   2015-01-28 16:35:41
 path: ancestry-with-rails
 category: rails-gems

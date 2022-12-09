@@ -24,8 +24,8 @@ const { frontmatter } = Astro.props;
     <div class="wrapper">
         <div class="post">
         <header class="post-header">
-        <h1 class="post-title">{frontmatter.title}</h1>
-        <p class="post-meta">{frontmatter.date.slice(0, 10)}</p>
+        <h1 class="post-title">{frontmatter?.title}</h1>
+        <p class="post-meta">{frontmatter?.date.slice(0, 10)}</p>
         </header>
         <article class="post-content">
             <slot></slot>
@@ -65,7 +65,7 @@ const { frontmatter } = Astro.props;
         }
     }
 
-    @import './styles/themes/atelier.dune.light.css';
-    @import "./styles/base", "./styles/layout";
+    @import '../pages/blogs/styles/themes/atelier.dune.light.css';
+    @import "../pages/blogs/styles/base", "../pages/blogs/styles/layout";
 
 </style>

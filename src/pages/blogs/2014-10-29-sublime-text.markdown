@@ -1,5 +1,5 @@
 ---
-layout: ./layout.astro
+layout: ../../layouts/BlogLayout.astro
 path       : sublime-text
 date       : 2014-10-29
 title      : Sublime Text
