@@ -71,3 +71,6 @@ games:
 - name: '战神：诸神黄昏'
   platform: 'ps5'
   score: 9.6
+- name: '卡牌之声：被囚禁的巨兽'
+  platform: 'switch'
+  score: 8
