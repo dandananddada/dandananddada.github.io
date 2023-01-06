@@ -74,3 +74,7 @@ games:
 - name: '卡牌之声：被囚禁的巨兽'
   platform: 'switch'
   score: 8
+- name: '巫师3：狂猎-完全版'
+  platform: 'ps5'
+  score: 9.8
+  time: '68h'
