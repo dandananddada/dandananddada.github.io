@@ -17,7 +17,7 @@ games:
   platform: 'steam'
 - name: '斩服少女：异布'
   score: 7.0
-  platform: 'xgp'
+  platform: 'switch'
 - name: '卧龙：苍天陨落'
   score: 9.0
   platform: 'ps5'
