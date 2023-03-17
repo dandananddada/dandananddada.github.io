@@ -1,2 +1,23 @@
-year: 2022
+year: 2023
 games:
+- name: '火焰纹章Engage'
+  score: 9.2
+  platform: 'switch'
+- name: '寄梦远方'
+  score: 9.6
+  platform: 'steam'
+- name: 'Hi-Fi RUSH'
+  score: 9.0
+  platform: 'xgp'
+- name: '原子之心'
+  score: 8.5
+  platform: 'xgp'
+- name: '街头霸王5'
+  score: 9.0
+  platform: 'steam'
+- name: '斩服少女：异布'
+  score: 7.0
+  platform: 'xgp'
+- name: '卧龙：苍天陨落'
+  score: 9.0
+  platform: 'ps5'
