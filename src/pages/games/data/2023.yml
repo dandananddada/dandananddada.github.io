@@ -4,7 +4,7 @@ games:
   score: 9.2
   platform: 'switch'
 - name: '寄梦远方'
-  score: 9.6
+  score: 9.8
   platform: 'steam'
 - name: 'Hi-Fi RUSH'
   score: 9.0
@@ -21,3 +21,24 @@ games:
 - name: '卧龙：苍天陨落'
   score: 9.0
   platform: 'ps5'
+- name: '生化危机4 重制版'
+  score: 9.4
+  platform: 'steam'
+- name: '空洞骑士'
+  score: 9.6
+  platform: 'xgp'
+- name: '歧路旅人2'
+  score: 9.6
+  platform: 'steam'
+- name: '塞尔达传说：王国之泪'
+  score: 9.8
+  platform: 'switch'
+- name: '灵魂骇客2'
+  score: 9.2
+  platform: 'ps5'
+- name: '最终幻想16'
+  score: 9.4
+  platform: 'ps5'
+- name: '黄牌空战7：未知空域'
+  score: 8.9
+  platform: 'steam'
