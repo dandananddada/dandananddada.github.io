@@ -42,6 +42,39 @@ games:
 - name: '黄牌空战7：未知空域'
   score: 8.9
   platform: 'steam'
-- name: ‘博得之门’3
+- name: '博得之门3'
   score: 10
+  platform: 'steam'
+- name: 'Cocoon'
+  score: 9.8
+  platform: 'steam'
+- name: '最终幻想15'
+  score: 8 
+  platform: 'ps5'
+- name: '裂开了!裤先生'
+  score: 8.5
+  platform: 'steam'
+- name: '美俏女剑士：起源'
+  score: 8.5
+  platform: 'steam'
+- name: '刺客信条：幻景'
+  score: 8.4
+  platform: 'uplay'
+- name: 'Alan Wake II'
+  score: 9
+  platform: 'epic'
+- name: 'Persona 5 Tactica'
+  score: 8.4
+  platrofm: 'xgp'
+- name: '巴别号漫游指南'
+  score: 9.8
+  platform: 'steam'
+- name: '街头霸王6'
+  score: 9
+  platform: 'steam'
+- name: '闪避刺客'
+  score: 8.6
+  platform: 'steam'
+- name: 'CRYMACHINA'
+  score: 7.0
   platform: 'steam'

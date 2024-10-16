@@ -1,0 +1,50 @@
+year: 2024
+games:
+- name: '魔女与百骑兵2'
+  score: 9.2
+  platform: 'ps4'
+- name: '漫威暗夜之子'
+  score: 8.8
+  platform: 'steam'
+- name: 'persona 3 reload'
+  score: 9
+  platform: 'xgp'
+- name: '奇唤士'
+  score: 8.6
+  platform: 'steam'
+- name: '浪人崛起'
+  score: 9
+  platform: 'ps5'
+- name: '女神异闻录：夜幕魅影'
+  score: 8.6
+  platform: 'app store'
+- name: '剑星'
+  score: 9.2
+  platform: 'ps5'
+- name: '狂星滥炸'
+  score: 8.2
+  platform: 'steam'
+- name: '祇：女神之路'
+  score: 8.6
+  platform: 'xgp'
+- name: '地狱之刃 2：塞娜的传说'
+  score: 9.6
+  platform: 'xgp'
+- name: '地狱之刃：塞娜的献祭'
+  score: 9.2
+  platform: 'steam'
+- name: '绝区零'
+  score: 8
+  platform: 'app store'
+- name: '星际拓荒'
+  score: 9.8
+  platform: 'steam'
+- name: '碧蓝幻想：RELINK'
+  score: 8.6
+  platform: 'steam'
+- name: '黑神话：悟空'
+  score: 9.8
+  platform: 'steam'
+- name: '暗黑破坏神4'
+  score: 8.8
+  platform: 'xgp'
