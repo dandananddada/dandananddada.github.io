@@ -48,3 +48,15 @@ games:
 - name: '暗黑破坏神4'
   score: 8.8
   platform: 'xgp'
+- name: 'neva'
+  score: 9.8
+  platform: 'steam'
+- name: '暗喻幻想'
+  score: 9.4
+  platform: 'steam'
+- name: '最终幻想VII：重生'
+  score: 9
+  platform: 'ps5'
+- name: '鸣潮'
+  score: 8.8
+  platform: 'pc'
