@@ -1,0 +1,35 @@
+year: 2025
+games:
+- name: '龙腾世纪：影障守护者'
+  score: 8.8 
+  platform: 'steam'
+- name: '奇异贤伴爱达之歌'
+  score: 6.4
+  platform: 'steam'
+- name: '怪物猎人：荒野'
+  score: 9.6 
+  platform: 'steam'
+- name: '漫威争锋'
+  score: 8 
+  platform: 'steam'
+- name: 'Marvel Snap'
+  score: 8.6 
+  platform: 'app store'
+- name: '暗黑破坏神4'
+  score: 8.6 
+  platform: 'steam'
+- name: '光与影：33号远征队'
+  score: 9.6 
+  platform: 'steam'
+- name: '黑暗世界：因与果'
+  score: 9.8 
+  platform: 'steam'
+- name: '第一后裔'
+  score: 8.4
+  platform: 'steam'
+- name: '明末：渊虚之羽'
+  score: 9.4
+  platform: 'steam'
+- name: '烟云十六声'
+  score: 9.5 
+  platform: 'steam'

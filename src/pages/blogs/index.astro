@@ -28,7 +28,7 @@ const allPosts = await Astro.glob('./*.markdown');
           const { date, title, summary } = node.frontmatter
           return (
             <li class="post">
-              <span class="post-meta">{ date.slice(0, 10) }</span>
+              <span class="post-meta">{ date.slice(0, 20) }</span>
               <h2>
                 <a class="post-link" href={node.url}>{ title }</a>
               </h2>
