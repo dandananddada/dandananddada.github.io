@@ -1,0 +1,56 @@
+---
+const { id, aria, content, first, second } = Astro.props;
+
+// Define TypeScript interface for props
+interface Props {
+  id: string;
+  aria: string;
+  title?: string;
+  content: {
+    title: string;
+    tasks: string[];
+  }[];
+  first?: boolean;
+  second?: boolean;
+}
+
+// Set class based on 'first' property
+// If 'first' is present, show the tab content immediately
+const firstClass = first ? "" : "hidden";
+// Set class based on 'second' property
+// If 'second' is present, use an alternate style for the image
+const secondClass = second
+  ? "bg-neutral-300"
+  : "bg-white";
+
+---
+<!-- Container for tab content that controls visibility and accessibility -->
+<div id={id} role="tabpanel" class={firstClass} aria-labelledby={aria}>
+  <!-- Astro Image component to display the image with dynamic classes based on the 'second' property -->
+  <div
+    class={`${secondClass} px-12 py-12 shadow-xl object-cover lg:aspect-auto shadow-neutral-200 rounded-xl`}
+    draggable={"false"}
+  >
+    <div class="max-h-120 overflow-scroll no-scrollbar">
+      {content?.map((project) => (
+        <div class="mb-12">
+          <h3 class="text-xl font-semibold mb-4">{project.title}</h3>
+          <ul>
+            {project.tasks.map((task) => (
+              <li class="list-disc mb-2">
+                <Fragment set:html={task} />
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+<style>
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+</style>
