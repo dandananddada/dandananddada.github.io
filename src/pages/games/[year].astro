@@ -38,7 +38,7 @@ const imageUrl = (game: any) => {
           </div>
           <div class="content">
           <div class="platform">{game.platform}</div>
-          <p class="name">{game.name}</p>
+          <p class={`name ${game.name.length > 12 ? 'sm' : ''}`}>{game.name}</p>
           </div>
         </div>
         </div>
@@ -126,5 +126,7 @@ body
   font-size: vw(16)
   font-family: MFDianHei_Noncommercial-Regular
   font-weight: 400
+  &.sm
+    font-size: vw(14)
 
 </style>
