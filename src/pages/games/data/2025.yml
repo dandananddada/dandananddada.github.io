@@ -34,8 +34,8 @@ games:
   score: 9.5 
   platform: 'pc'
 - name: 'dispatch'
-  score: 8.9
+  score: 9
   platform: 'steam'
 - name: '闪电十一人：英雄们的胜利之路'
-  score: 9.2
+  score: 9.4
   platform: 'steam'
